@@ -1,26 +1,27 @@
+/* common.css */
 
-        h1{
-         text-align:center;
-         color: purple;
-        }
-        h2{
-         text-align: center;
-         color: purple;
-         font-weight: bold;
-        }
-  
-        div{
-         text-align: center;
-        }
-  
-        h2{
-         box-shadow: 1px -1px 10px 5px rgba(0,0,0,0.2);
-         border-radius: 10px;
-         margin: 20px;
-        }         
-  
-        div{
-         margin: 10px;       
-        }
+h1{
+ text-align:center;
+ color: purple;
+}
+h2{
+ text-align: center;
+ color: purple;
+ font-weight: bold;
+}
+
+div{
+ text-align: center;
+}
+
+h2{
+ box-shadow: 1px -1px 10px 5px rgba(0,0,0,0.2);
+ border-radius: 10px;
+ margin: 20px;
+}         
+
+div{
+ margin: 10px;       
+}
 
 
