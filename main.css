@@ -31,8 +31,8 @@ div{
 
 .head{
     border-radius: 50%;
-    top: 10px;
-    left: 10px;
+    top: 55px;
+    left: 40px;
     background: pink;
     position: absolute;
     width: 50px;
@@ -41,8 +41,8 @@ div{
 
 .head2{
     border-radius: 50%;
-    top: 10px;
-    right: 10px;
+    top: 55px;
+    right: 40px;
     background: pink;
     position: absolute;
     width: 50px;
