@@ -25,11 +25,13 @@ div{
  margin: 10px;       
 }
 
-#ass{
+#link{
  color: blue;
+height:10px;
 }
 
-
-
-
+*{
+text-align:center; 
+margin: 15px;	
+}
 
