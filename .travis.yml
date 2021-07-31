@@ -1,39 +1,18 @@
-# 指定构建环境是Node.js，当前版本是稳定版
-anguage: node_js
+sudo: false
+language: node_js
 node_js:
-   - "12"
-
-# 设置钩子只检测blog-source分支的push变动
+  - 12 # use nodejs v12 LTS
+cache: npm
 branches:
   only:
-    - blog-source
-
-# 设置缓存文件
-cache:
-  directories:
-    - node_modules
-
-before_install:
-  - yarn install --ignore-engines
-  - npm install -g hexo-cli
-
-#安装git插件和搜索功能插件
-install:
-  - npm install
-  - npm install hexo-deployer-git --save
-  - npm install hexo-generator-searchdb --save
-  - npm install hexo-renderer-pug hexo-renderer-stylus
-  
-
-# 执行清缓存，生成网页操作
+    - master # build master branch only
 script:
-  - hexo clean
-  - hexo generate
-
-# 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
-after_script:
-  - git config user.name "Creativecole"
-  - git config user.email "creativecole@foxmail.com"
-  # 替换同目录下的_config.yml文件中github_token字符串为travis后台刚才配置的变量，注>意此处sed命令用了双引号。单引号无效！
-  - sed -i "s/github_token/${github_token}/g" ./_config.yml
-  - hexo deploy
+  - hexo generate # generate static files
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  local-dir: public
