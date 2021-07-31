@@ -7,6 +7,7 @@ branches:
   only:
     - master # build master branch only
 script:
+  - hexo clean
   - hexo generate # generate static files
 deploy:
   provider: pages
@@ -14,7 +15,7 @@ deploy:
   github-token: $GH_TOKEN
   keep-history: true
   on:
-    branch: master
+    branch: gh-pages
   local-dir: public
 
 install:
