@@ -1,6 +1,7 @@
 # 指定构建环境是Node.js，当前版本是稳定版
 anguage: node_js
-node_js: stable
+node_js:
+   - 12.16.2
 
 # 设置钩子只检测blog-source分支的push变动
 branches:
@@ -14,7 +15,7 @@ cache:
 
 before_install:
   - npm install -g hexo-cli
-  - yarn config set ignore-engines true
+
 
 #安装git插件和搜索功能插件
 install:
