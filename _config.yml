@@ -104,4 +104,3 @@ theme: butterfly
 deploy:
   type: git
   repo: https://github.com/Creativecole/creativecole.github.io.git
-  branch: gh-pages
