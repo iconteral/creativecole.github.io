@@ -15,9 +15,11 @@ deploy:
   skip-cleanup: true
   github-token: $GH_TOKEN
   keep-history: true
+  committer_from_gh: true
+  target_branch: master
   on:
     all_branches: true # solve a permission problem
-  target_branch: master
+    branch: source
   local-dir: public
 
 install:
