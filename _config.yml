@@ -103,4 +103,4 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/Creativecole/creativecole.github.io.git
+  repo: git@github.com:Creativecole/creativecole.github.io.git
