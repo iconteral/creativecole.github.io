@@ -10,7 +10,6 @@ script:
   - npm install hexo-renderer-pug hexo-renderer-stylus
   - hexo clean
   - hexo generate # generate static files
-  - hexo deploy
 deploy:
   provider: pages
   strategy: git
