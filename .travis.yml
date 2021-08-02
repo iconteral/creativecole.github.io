@@ -3,49 +3,32 @@ language: node_js
 node_js:
   - 12 # use nodejs v12 LTS
 
-cache: 
-  directories:
-     - node_modules
+cache: npm
 
 branches:
   only:
     - source # build hexo branch only
 
-before_install:
-  - npm install -g hexo-cli  
-
-# S: Build Lifecycle
 install:
   - yarn
-  - npm install
+  - npm install hexo --save
   - npm install hexo-renderer-pug hexo-renderer-stylus
-  - npm install hexo-deployer-git --save
 
 script:
   - hexo clean
   - hexo generate # generate static files
 
-#deploy:
-#  provider: pages
-#  strategy: git
-#  token: $GH_TOKEN
-#  skip-cleanup: true
-#  keep_history: true
-#  committer_from_gh: true
-#  target_branch: master
-#  local_dir: public
-
-after_script:
-#  - cd ./public
-#  - git init
-    - git config user.name "Creativecole"
-    - git config user.email "creativecole@foxmail.com"
-#  - git add .
-#  - git commit -m "Update docs"
-  - sed -i "s/GH_TOKEN/${GH_TOKEN}/g" ./_config.yml
-  - hexo deploy
+deploy:
+   provider: pages
+   strategy: git
+   token: $GH_TOKEN
+   skip_cleanup: true
+   keep_history: true
+   committer_from_gh: true
+   target_branch: master
+   local_dir: public
 
  on:
-    all_branches: true # solve a permission problem
-    branch: source
+   all_branches: true # solve a permission problem
+   branch: source
 
