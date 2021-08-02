@@ -1,3 +1,6 @@
+root:
+  dist: xenial
+  os: linux
 language: node_js
 node_js:
   - 12 # use nodejs v12 LTS
@@ -13,17 +16,15 @@ script:
 deploy:
   provider: pages
   strategy: git
-  dist: xenial
-  os: linux
   token: $GH_TOKEN
   cleanup: false
   keep_history: true
   committer_from_gh: true
   target_branch: master
+  local_dir: public
   on:
     all_branches: true # solve a permission problem
     branch: source
-  local_dir: public
 
 install:
   - yarn
