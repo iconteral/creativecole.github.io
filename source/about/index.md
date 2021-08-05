@@ -1,5 +1,5 @@
 ---
-title: about
+title: About
 date: 2021-07-31 23:19:18
-layout: about
 ---
+## <center><big><b> Not about to say </b></big></center>
