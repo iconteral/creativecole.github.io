@@ -2,6 +2,8 @@
 title: Mermaid Test
 date: 2021-08-06 00:35:45
 tags: test
+top_img: ../img/mermaid.png
+cover: ../img/mermaid.png
 ---
 ```mermaid
 sequenceDiagram
