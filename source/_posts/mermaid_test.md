@@ -2,8 +2,8 @@
 title: Mermaid Test
 date: 2021-08-06 00:35:45
 tags: test
-top_img: ../img/mermaid.png
-cover: ../img/mermaid.png
+top_img: https://cdn.jsdelivr.net/gh/Creativecole/creativecole.github.io@source/source/img/mermaid_test/mermaid.png
+cover: https://cdn.jsdelivr.net/gh/Creativecole/creativecole.github.io@source/source/img/mermaid_test/mermaid.png
 ---
 ```mermaid
 sequenceDiagram
